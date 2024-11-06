@@ -3,7 +3,7 @@ import BulletChart from '../assets/bullet-chart.png';
 
 const HtsPos = () => {
   return (
-    <div className="w-[375px] h-[230px] bg-white rounded-lg shadow-md p-4 flex flex-col space-y-4">
+    <div className="w-full w-[32vw] h-[230px] bg-white rounded-lg shadow-md p-4 flex flex-col space-y-4">
       {/* Title Section */}
       <div className="w-full">
         <p className="text-xs text-gray-500 text-left">1ST 95 Primary Indicator</p>

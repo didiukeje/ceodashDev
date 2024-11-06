@@ -4,14 +4,14 @@ import PvlsIndicator from './PvlsIndicator';
 
 const Section2 = () => {
   return (
-    <div className="flex flex-wrap justify-between mx-8 space-y-1">
-      <div className="flex-shrink-0 w-full max-w-[375px]">
+    <div className="flex flex-wrap justify-center gap-1 p-4">
+      <div className="w-[32vw] h-[32vw]">
         <HtsPosIndicator />
       </div>
-      <div className="flex-shrink-0 w-full max-w-[375px]">
+      <div className="w-[32vw] h-[32vw]">
         <TxCurrIndicator />
       </div>
-      <div className="flex-shrink-0 w-full max-w-[375px]">
+      <div className="w-[32vw] h-[32vw]">
         <PvlsIndicator />
       </div>
     </div>
@@ -19,3 +19,4 @@ const Section2 = () => {
 };
 
 export default Section2;
+
