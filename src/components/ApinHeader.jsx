@@ -3,7 +3,7 @@ import IconOrderBg from "../assets/iconorderbg.png";
 function ApinHeader() {
   return (
     <div 
-      className="bg-white rounded-[3px] h-[95px] w-[320px] shadow-md p-4 flex items-center space-x-4"
+      className="bg-white rounded-[3px] h-[100px] w-[330px] shadow-md p-4 flex items-center space-x-4"
     >
       <div 
         className="relative h-14 w-14 bg-cover bg-center rounded-full"

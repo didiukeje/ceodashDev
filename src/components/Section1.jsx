@@ -6,9 +6,9 @@ import IconOrder from "../assets/iconorder.png";
 
 const Section1 = () => {
   return (
-    <div className="flex flex-wrap w-full px-4 py-2 space-y-4 md:space-y-0"> {/* Added vertical spacing for smaller screens */}
+    <div className="flex flex-wrap w-full px-4 py-2 space-y-4 md:space-y-0 "> {/* Added vertical spacing for smaller screens */}
       {/* Left Column */}
-      <div className="flex flex-col w-full md:w-[300px] mb-4 space-y-8">  {/* Organized as a column */}
+      <div className="flex flex-col w-full md:w-[300px] mb-4 space-y-6">  {/* Organized as a column */}
         <ApinHeader />  
         <TopIndicator 
           value="27" 
@@ -25,7 +25,7 @@ const Section1 = () => {
         <div className="flex-1 mb-4">  
           <FirstSection />
         </div>
-        <div className="flex-shrink-0 w-full max-w-[55vw] h-[49vh] overflow-hidden">
+        <div className="flex-shrink-0 w-full max-w-[55vw] h-[48vh] overflow-hidden">
           <GoogleMapComponent />
         </div>
       </div>

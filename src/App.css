@@ -4,3 +4,6 @@
   background-color: #EFF0F6;
 }
 
+html, body {
+  overflow-x: hidden;
+}

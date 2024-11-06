@@ -17,7 +17,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 a {
   font-weight: 500;
   color: #646cff;
@@ -34,6 +38,11 @@ body {
   min-width: 320px;
   min-height: 100vh;  
   overflow-x: hidden; 
+}
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
