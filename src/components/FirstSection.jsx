@@ -3,7 +3,6 @@ import { TopIndicator } from './TopIndicator';
 import Group from '../assets/Group.png';
 import TablerRibbonHealth from '../assets/tableribbonhealth.png';
 import Microscope from '../assets/uitmicroscope.png';
-import IconOrder from "../assets/iconorder.png";
 import axios from 'axios';
 import { API_URL } from '../api/constants';
 
