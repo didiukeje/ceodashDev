@@ -5,12 +5,20 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
-    hmr: true,  // Ensure HMR is enabled
-  }, 
-  optimizeDeps: {
-    include: ['recharts'],  // Force Vite to optimize recharts
-  },  
-  build: {
-    outDir: 'public', // This is the default, ensure it's set
+    hmr: true,  
+    proxy: {
+      // Proxy API requests to the backend server
+      '/ceodashboard': {
+        target: 'http://105.113.2.249:8080',
+        changeOrigin: true,
+        secure: false,
+      }
+    } 
   },
-})
+  optimizeDeps: {
+    include: ['recharts'],  
+  },
+  build: {
+    outDir: 'public',
+  }
+});

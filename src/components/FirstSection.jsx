@@ -5,6 +5,7 @@ import TablerRibbonHealth from '../assets/tableribbonhealth.png';
 import Microscope from '../assets/uitmicroscope.png';
 import axios from 'axios';
 import { API_URL } from '../api/constants';
+import { API_URLS } from '../api/apiConfig';
 
 
 function FirstSection() {
@@ -19,12 +20,23 @@ function FirstSection() {
       }
     }
     
-    getGroupedData("Benue")
+    getGroupedData("Benue");
+
+    const getTxCurrData = async (state) => {
+      try {
+        const response = await axios.post(API_URLS, { state });
+        setDataRes(response.data);
+      } catch(err) {
+        console.error("Error fetching TxCurr data:", err);
+      }
+    }
+    
+    getTxCurrData("Benue")
   }, [])
   return (
     <div className="flex flex-col gap-y-6">
       <TopIndicator 
-        value="0" 
+        value={dataRes?.tx_cur?.data?.[0] ?? ""}
         title="TX_CURR" 
         difference={(-249716).toLocaleString()}
         gapText="TREATMENT GAP" 
