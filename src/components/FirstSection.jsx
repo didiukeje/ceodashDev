@@ -26,8 +26,11 @@ function FirstSection() {
       try {
         const response = await axios.post(API_URLS, { state });
         setDataRes(response.data);
+        console.log("dataRes:", JSON.stringify(response.data, null, 2));
+
       } catch(err) {
         console.error("Error fetching TxCurr data:", err);
+        
       }
     }
     
@@ -41,8 +44,9 @@ function FirstSection() {
         difference={(-249716).toLocaleString()}
         gapText="TREATMENT GAP" 
         icon={Group}
-        valueClass="text-2xl font-bold text-gray-900"
-        titleClass="text-sm text-gray-700"
+        valueClass="text-2xl font-bold text-gray-900 text-left"
+        titleClass="text-sm text-gray-700 text-left"
+        iconSize="h-16 w-16"  
       />
       <TopIndicator 
         value={dataRes?.totalHTSPOS?.data?.[0] ?? ""}
@@ -50,8 +54,9 @@ function FirstSection() {
         difference={(-10635).toLocaleString()}
         gapText="CASE FINDING GAP" 
         icon={TablerRibbonHealth}
-        valueClass="text-2xl font-bold text-gray-900"
-        titleClass="text-sm text-gray-700"
+        valueClass="text-2xl font-bold text-gray-900 text-left"
+        titleClass="text-sm text-gray-700 text-left"
+        iconSize="h-16 w-16"  
       />
       <TopIndicator 
         value={(67152).toLocaleString()}
@@ -59,8 +64,9 @@ function FirstSection() {
         difference={(-186350).toLocaleString()}
         gapText="TESTING GAP" 
         icon={Microscope}
-        valueClass="text-2xl font-bold text-gray-900"
-        titleClass="text-sm text-gray-700"
+        valueClass="text-2xl font-bold text-gray-900 text-left"
+        titleClass="text-sm text-gray-700 text-left"
+        iconSize="h-16 w-16"  
       />
     </div>
   );
